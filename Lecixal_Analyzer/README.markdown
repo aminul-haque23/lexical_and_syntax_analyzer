@@ -63,17 +63,6 @@ Result of postfix expression: -2
 - **Postfix evaluation logic**: `evaluatePostfix`, `doOperation`, `printStack`.
 - **Data structures**: Stacks for evaluation, vectors for intermediate code, `unordered_map` for variables.
 
-## Limitations
-- Lexeme length is limited to 98 characters; longer lexemes will cause the program to exit with an error.
-- The program assumes correctly formatted input. Invalid inputs may lead to unexpected behavior.
-- The input file name ("input.txt") is hardcoded and must be updated in the code if a different file is used.
-
 ## Future Work
 - Implement a syntax analyzer to build and traverse a syntax tree for more complex expression handling (planned for Part B).
 - Enhance error handling for invalid inputs or expressions.
-
-## Contributing
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. *(Note: Please add a LICENSE file to your repository if you intend to use the MIT License or specify a different license.)*
