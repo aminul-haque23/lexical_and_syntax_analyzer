@@ -1,0 +1,210 @@
+Test case 1:
+A = (A - B) + (C % D) * (D ^ 3)
+
+Test case 1 output:
+
+Next token is: 11, Next lexeme is A
+Enter <assignment>
+Next token is: 20, Next lexeme is =
+Next token is: 25, Next lexeme is (
+Enter <expr>
+Enter <term>
+Enter <factor>
+Next token is: 11, Next lexeme is A
+Enter <expr>
+Enter <term>
+Enter <factor>
+Next token is: 22, Next lexeme is -
+Exit <factor>
+Exit <term>
+Next token is: 11, Next lexeme is B
+Enter <term>
+Enter <factor>
+Next token is: 26, Next lexeme is )
+Exit <factor>
+Exit <term>
+Exit <expr>
+Next token is: 21, Next lexeme is +
+Exit <factor>
+Exit <term>
+Next token is: 25, Next lexeme is (
+Enter <term>
+Enter <factor>
+Next token is: 11, Next lexeme is C
+Enter <expr>
+Enter <term>
+Enter <factor>
+Next token is: 18, Next lexeme is %
+Exit <factor>
+Next token is: 11, Next lexeme is D
+Enter <factor>
+Next token is: 26, Next lexeme is )
+Exit <factor>
+Exit <term>
+Exit <expr>
+Next token is: 23, Next lexeme is *
+Exit <factor>
+Next token is: 25, Next lexeme is (
+Enter <factor>
+Next token is: 11, Next lexeme is D
+Enter <expr>
+Enter <term>
+Enter <factor>
+Next token is: 19, Next lexeme is ^
+Exit <factor>
+Next token is: 10, Next lexeme is 3
+Enter <factor>
+Next token is: 26, Next lexeme is )
+Exit <factor>
+Exit <term>
+Exit <expr>
+Next token is: -1, Next lexeme is EOF
+Exit <factor>
+Exit <term>
+Exit <expr>
+Exit <assignment>
+Successfully Parsed Expression
+Infix Expression: (A = ((A - B) + ((C % D) * (D ^ 3))))
+Postfix Expression: A A B - C D % D 3 ^ * + =
+push A
+push A
+push B
+pop B
+pop A
+subtract
+push T0
+push C
+push D
+pop D
+pop C
+mod
+push T1
+push D
+push 3
+pop 3
+pop D
+multiply
+push T2
+pop T2
+pop T1
+add
+push T3
+pop T3
+store T0
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+Test case 2: 
+t = (4 * x + 9 * y -18) / ( x + y + z)
+
+
+Test case 2 output:
+
+Next token is: 11, Next lexeme is t
+Enter <assignment>
+Next token is: 20, Next lexeme is =
+Next token is: 25, Next lexeme is (
+Enter <expr>
+Enter <term>
+Enter <factor>
+Next token is: 10, Next lexeme is 4
+Enter <expr>
+Enter <term>
+Enter <factor>
+Next token is: 23, Next lexeme is *
+Exit <factor>
+Next token is: 11, Next lexeme is x
+Enter <factor>
+Next token is: 21, Next lexeme is +
+Exit <factor>
+Exit <term>
+Next token is: 10, Next lexeme is 9
+Enter <term>
+Enter <factor>
+Next token is: 23, Next lexeme is *
+Exit <factor>
+Next token is: 11, Next lexeme is y
+Enter <factor>
+Next token is: 22, Next lexeme is -
+Exit <factor>
+Exit <term>
+Next token is: 10, Next lexeme is 18
+Enter <term>
+Enter <factor>
+Next token is: 26, Next lexeme is )
+Exit <factor>
+Exit <term>
+Exit <expr>
+Next token is: 24, Next lexeme is /
+Exit <factor>
+Next token is: 25, Next lexeme is (
+Enter <factor>
+Next token is: 11, Next lexeme is x
+Enter <expr>
+Enter <term>
+Enter <factor>
+Next token is: 21, Next lexeme is +
+Exit <factor>
+Exit <term>
+Next token is: 11, Next lexeme is y
+Enter <term>
+Enter <factor>
+Next token is: 21, Next lexeme is +
+Exit <factor>
+Exit <term>
+Next token is: 11, Next lexeme is z
+Enter <term>
+Enter <factor>
+Next token is: 26, Next lexeme is )
+Exit <factor>
+Exit <term>
+Exit <expr>
+Next token is: -1, Next lexeme is EOF
+Exit <factor>
+Exit <term>
+Exit <expr>
+Exit <assignment>
+Successfully Parsed Expression
+Infix Expression: (t = ((((4 * x) + (9 * y)) - 18) / ((x + y) + z)))
+Postfix Expression: t 4 x * 9 y * + 18 - x y + z + / =
+push t
+push 4
+push x
+pop x
+pop 4
+multiply
+push T0
+push 9
+push y
+pop y
+pop 9
+multiply
+push T1
+pop T1
+pop T0
+add
+push T2
+push 18
+pop 18
+pop T2
+subtract
+push T3
+push x
+push y
+pop y
+pop x
+add
+push T4
+push z
+pop z
+pop T4
+add
+push T5
+pop T5
+pop T3
+divide
+push T6
+pop T6
+store t

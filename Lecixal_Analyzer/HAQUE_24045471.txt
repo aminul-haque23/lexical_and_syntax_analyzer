@@ -1,0 +1,326 @@
+Test case 1:   6 ~ 6 2 ^ 4 1 * 8 *  - .5 ^ + 2 1 * /
+
+Output: 
+
+Next token is 0, next lexeme is 6
+Next token is 17, next lexeme is ~
+Next token is 17, next lexeme is 6
+Next token is 17, next lexeme is 2
+Next token is 19, next lexeme is ^
+Next token is 19, next lexeme is 4
+Next token is 19, next lexeme is 1
+Next token is 23, next lexeme is *
+Next token is 23, next lexeme is 8
+Next token is 23, next lexeme is *
+Next token is 22, next lexeme is -
+Next token is 9, next lexeme is .5
+Next token is 19, next lexeme is ^
+Next token is 21, next lexeme is +
+Next token is 21, next lexeme is 2
+Next token is 21, next lexeme is 1
+Next token is 23, next lexeme is *
+Next token is 24, next lexeme is /
+Next token is -1, next lexeme is EOF
+
+
+Pushed 6 in the stack.
+The stack currently has: 6
+
+Encountered ~
+Popped 6 in the stack.
+The stack currently has:
+
+Unary minus: -1 * 6 = -6
+
+Pushed -6 in the stack.
+The stack currently has: -6
+
+Pushed 6 in the stack.
+The stack currently has: -6 6
+
+Pushed 2 in the stack.
+The stack currently has: -6 6 2
+
+Encountered ^
+Popped 2 in the stack.
+The stack currently has: -6 6
+
+Popped 6 in the stack.
+The stack currently has: -6
+
+Power: 6 ^ 2 = 36
+Pushed 36 in the stack.
+The stack currently has: -6 36
+
+Pushed 4 in the stack.
+The stack currently has: -6 36 4
+
+Pushed 1 in the stack.
+The stack currently has: -6 36 4 1
+
+Encountered *
+Popped 1 in the stack.
+The stack currently has: -6 36 4
+
+Popped 4 in the stack.
+The stack currently has: -6 36
+
+Multiplication: 4 * 1 = 4
+Pushed 4 in the stack.
+The stack currently has: -6 36 4
+
+Pushed 8 in the stack.
+The stack currently has: -6 36 4 8
+
+Encountered *
+Popped 8 in the stack.
+The stack currently has: -6 36 4
+
+Popped 4 in the stack.
+The stack currently has: -6 36
+
+Multiplication: 4 * 8 = 32
+Pushed 32 in the stack.
+The stack currently has: -6 36 32
+
+Encountered -
+Popped 32 in the stack.
+The stack currently has: -6 36
+
+Popped 36 in the stack.
+The stack currently has: -6
+
+Substracting: 36 - 32 = 4
+Pushed 4 in the stack.
+The stack currently has: -6 4
+
+Pushed 0.5 in the stack.
+The stack currently has: -6 4 0.5
+
+Encountered ^
+Popped 0.5 in the stack.
+The stack currently has: -6 4
+
+Popped 4 in the stack.
+The stack currently has: -6
+
+Power: 4 ^ 0.5 = 2
+Pushed 2 in the stack.
+The stack currently has: -6 2
+
+Encountered +
+Popped 2 in the stack.
+The stack currently has: -6
+
+Popped -6 in the stack.
+The stack currently has:
+
+Adding: -6 + 2 = -4
+Pushed -4 in the stack.
+The stack currently has: -4
+
+Pushed 2 in the stack.
+The stack currently has: -4 2
+
+Pushed 1 in the stack.
+The stack currently has: -4 2 1
+
+Encountered *
+Popped 1 in the stack.
+The stack currently has: -4 2
+
+Popped 2 in the stack.
+The stack currently has: -4
+
+Multiplication: 2 * 1 = 2
+Pushed 2 in the stack.
+The stack currently has: -4 2
+
+Encountered /
+Popped 2 in the stack.
+The stack currently has: -4
+
+Popped -4 in the stack.
+The stack currently has:
+
+Dividing: -4 / 2 = -2
+Pushed -2 in the stack.
+The stack currently has: -2
+
+Result of postfix expression: -2
+
+// End of Test case 1
+
+
+
+Test case 2:
+a 1 =
+
+b 6 =
+
+c 8 =
+
+b ~ b 2 ^ 4 a * c * - .5 ^ + 2 a * /
+
+
+Output: 
+
+Next token is 11, next lexeme is a
+Next token is 11, next lexeme is 1
+Next token is 20, next lexeme is =
+Next token is 11, next lexeme is b
+Next token is 11, next lexeme is 6
+Next token is 20, next lexeme is =
+Next token is 11, next lexeme is c
+Next token is 11, next lexeme is 8
+Next token is 20, next lexeme is =
+Next token is 11, next lexeme is b
+Next token is 17, next lexeme is ~
+Next token is 11, next lexeme is b
+Next token is 11, next lexeme is 2
+Next token is 19, next lexeme is ^
+Next token is 19, next lexeme is 4
+Next token is 11, next lexeme is a
+Next token is 23, next lexeme is *
+Next token is 11, next lexeme is c
+Next token is 23, next lexeme is *
+Next token is 22, next lexeme is -
+Next token is 9, next lexeme is .5
+Next token is 19, next lexeme is ^
+Next token is 21, next lexeme is +
+Next token is 21, next lexeme is 2
+Next token is 11, next lexeme is a
+Next token is 23, next lexeme is *
+Next token is 24, next lexeme is /
+Next token is -1, next lexeme is EOF
+
+
+Pushed 6 in the stack.
+The stack currently has: 6
+
+Encountered ~
+Popped 6 in the stack.
+The stack currently has:
+
+Unary minus: -1 * 6 = -6
+
+Pushed -6 in the stack.
+The stack currently has: -6
+
+Pushed 6 in the stack.
+The stack currently has: -6 6
+
+Pushed 2 in the stack.
+The stack currently has: -6 6 2
+
+Encountered ^
+Popped 2 in the stack.
+The stack currently has: -6 6
+
+Popped 6 in the stack.
+The stack currently has: -6
+
+Power: 6 ^ 2 = 36
+Pushed 36 in the stack.
+The stack currently has: -6 36
+
+Pushed 4 in the stack.
+The stack currently has: -6 36 4
+
+Pushed 1 in the stack.
+The stack currently has: -6 36 4 1
+
+Encountered *
+Popped 1 in the stack.
+The stack currently has: -6 36 4
+
+Popped 4 in the stack.
+The stack currently has: -6 36
+
+Multiplication: 4 * 1 = 4
+Pushed 4 in the stack.
+The stack currently has: -6 36 4
+
+Pushed 8 in the stack.
+The stack currently has: -6 36 4 8
+
+Encountered *
+Popped 8 in the stack.
+The stack currently has: -6 36 4
+
+Popped 4 in the stack.
+The stack currently has: -6 36
+
+Multiplication: 4 * 8 = 32
+Pushed 32 in the stack.
+The stack currently has: -6 36 32
+
+Encountered -
+Popped 32 in the stack.
+The stack currently has: -6 36
+
+Popped 36 in the stack.
+The stack currently has: -6
+
+Substracting: 36 - 32 = 4
+Pushed 4 in the stack.
+The stack currently has: -6 4
+
+Pushed 0.5 in the stack.
+The stack currently has: -6 4 0.5
+
+Encountered ^
+Popped 0.5 in the stack.
+The stack currently has: -6 4
+
+Popped 4 in the stack.
+The stack currently has: -6
+
+Power: 4 ^ 0.5 = 2
+Pushed 2 in the stack.
+The stack currently has: -6 2
+
+Encountered +
+Popped 2 in the stack.
+The stack currently has: -6
+
+Popped -6 in the stack.
+The stack currently has:
+
+Adding: -6 + 2 = -4
+Pushed -4 in the stack.
+The stack currently has: -4
+
+Pushed 2 in the stack.
+The stack currently has: -4 2
+
+Pushed 1 in the stack.
+The stack currently has: -4 2 1
+
+Encountered *
+Popped 1 in the stack.
+The stack currently has: -4 2
+
+Popped 2 in the stack.
+The stack currently has: -4
+
+Multiplication: 2 * 1 = 2
+Pushed 2 in the stack.
+The stack currently has: -4 2
+
+Encountered /
+Popped 2 in the stack.
+The stack currently has: -4
+
+Popped -4 in the stack.
+The stack currently has:
+
+Dividing: -4 / 2 = -2
+Pushed -2 in the stack.
+The stack currently has: -2
+
+Result of postfix expression: -2
+
+// End of part a test case 2
+
+
