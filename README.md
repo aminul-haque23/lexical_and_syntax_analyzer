@@ -12,12 +12,12 @@ Both projects are written in C++ and serve as educational tools to demonstrate h
 ### Lexical Analyzer
 - **Location**: `lexical_analyzer` folder
 - **Purpose**: Breaks down input into manageable tokens and performs direct evaluation of postfix expressions, supporting basic arithmetic and variables.
-- **More Info**: See the [Lexical Analyzer README](lexical_analyzer/README.markdown) for detailed instructions and examples.
+- **More Info**: See the Lexical Analyzer README for detailed instructions and examples.
 
 ### Syntax Analyzer
 - **Location**: `syntax_analyzer` folder
 - **Purpose**: Tokenizes input, ensures it follows a defined grammar by building a syntax tree, and produces postfix notation and intermediate code for further processing.
-- **More Info**: See the [Syntax Analyzer README](syntax_analyzer/README.md) for detailed instructions and examples.
+- **More Info**: See the Syntax Analyzer README for detailed instructions and examples.
 
 ## General Concept
 - The **Lexical Analyzer** is like a scanner that reads raw code and organizes it into meaningful pieces (tokens), then uses those pieces to compute results immediately.
