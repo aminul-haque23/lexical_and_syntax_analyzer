@@ -1,11 +1,11 @@
 # Lexical and Syntax Analyzer
 
-This repository, `lexical_and_syntax_analyzer`, houses two projects that explore essential stages of a compiler frontend:
+This repository, `lexical_and_syntax_analyzer`, has two projects that shows two stages of a compiler frontend:
 
 1. **Lexical Analyzer**: Converts input source code into tokens and evaluates postfix expressions directly.
 2. **Syntax Analyzer**: Processes input into tokens, checks their structure against a grammar, and generates a syntax tree, postfix notation, and intermediate code.
 
-Both projects are written in C++ and serve as educational tools to demonstrate how compilers process and understand source code. They share the initial step of lexical analysis but differ in their subsequent goals—one focuses on evaluation, the other on structured parsing and code generation.
+Both projects are written in C++ and demonstrate how compilers process and understand source code.
 
 ## Projects
 
